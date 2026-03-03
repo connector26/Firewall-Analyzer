@@ -3097,3 +3097,27 @@ weighted avg       0.00      0.00      0.00       2.0
 2026-03-03 08:58:48,575 - FirewallAnalyzer - INFO - Encoding categorical features (protocol, action)...
 2026-03-03 08:58:48,665 - FirewallAnalyzer - INFO - Feature engineering pipeline complete.
 2026-03-03 08:58:48,940 - FirewallAnalyzer - INFO - Starting Firewall Analyzer Dashboard (violet theme)...
+2026-03-03 08:59:27,211 - FirewallAnalyzer - INFO - Loading data from CSV file: ./data/internet_firewall_data.csv
+2026-03-03 08:59:27,337 - FirewallAnalyzer - INFO - Starting preprocessing: mapping columns and filling missing data.
+2026-03-03 08:59:27,342 - FirewallAnalyzer - WARNING - Column 'timestamp' missing. Filling with default: 2026-03-03 08:59:26.246755
+2026-03-03 08:59:27,343 - FirewallAnalyzer - WARNING - Column 'source_ip' missing. Filling with default: 0.0.0.0
+2026-03-03 08:59:27,344 - FirewallAnalyzer - WARNING - Column 'destination_ip' missing. Filling with default: 0.0.0.0
+2026-03-03 08:59:27,346 - FirewallAnalyzer - WARNING - Column 'protocol' missing. Filling with default: TCP
+2026-03-03 08:59:27,347 - FirewallAnalyzer - WARNING - Column 'flags' missing. Filling with default: NONE
+2026-03-03 08:59:27,350 - FirewallAnalyzer - WARNING - Found 173 invalid values in 'source_port'. Replacing with random valid ports.
+2026-03-03 08:59:27,353 - FirewallAnalyzer - WARNING - Found 173 invalid values in 'destination_port'. Replacing with random valid ports.
+2026-03-03 08:59:27,354 - FirewallAnalyzer - INFO - Cleaning data: removing duplicates and irrelevant rows.
+2026-03-03 08:59:27,445 - FirewallAnalyzer - DEBUG - Removed 8218 duplicate rows.
+2026-03-03 08:59:27,448 - FirewallAnalyzer - INFO - Normalizing numeric features using MinMaxScaler.
+2026-03-03 08:59:27,448 - FirewallAnalyzer - DEBUG - Normalizing column: bytes_sent
+2026-03-03 08:59:27,454 - FirewallAnalyzer - DEBUG - Normalizing column: bytes_received
+2026-03-03 08:59:27,459 - FirewallAnalyzer - DEBUG - Normalizing column: duration
+2026-03-03 08:59:27,464 - FirewallAnalyzer - INFO - Handling missing values.
+2026-03-03 08:59:27,528 - FirewallAnalyzer - INFO - Parsing timestamp column and handling timezone.
+2026-03-03 08:59:27,547 - FirewallAnalyzer - INFO - Preprocessing complete.
+2026-03-03 08:59:27,547 - FirewallAnalyzer - INFO - Starting feature engineering pipeline...
+2026-03-03 08:59:27,548 - FirewallAnalyzer - INFO - Extracting temporal features from timestamp...
+2026-03-03 08:59:27,591 - FirewallAnalyzer - INFO - Computing network behavior features...
+2026-03-03 08:59:27,619 - FirewallAnalyzer - INFO - Encoding categorical features (protocol, action)...
+2026-03-03 08:59:27,664 - FirewallAnalyzer - INFO - Feature engineering pipeline complete.
+2026-03-03 08:59:27,827 - FirewallAnalyzer - INFO - Starting Firewall Analyzer Dashboard (violet theme)...
